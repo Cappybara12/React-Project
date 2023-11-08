@@ -1,0 +1,52 @@
+/* Navbar Container */
+.navbar {
+  display: flex; /* Show the menu for larger screens */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Navbar Logo */
+.navbarLogo {
+  cursor: pointer;
+}
+
+/* Menu for Smaller Screens (Burger Menu) - Initially Hidden */
+.menuHidden {
+  display: none; /* Hide the menu by default */
+  position: absolute;
+  top: 60px;
+  right: 0; /* Adjust the position to the right side */
+  background-color: #333;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Displayed Menu for Smaller Screens (Initially Closed) */
+.menuVisible {
+  display: flex; /* Show the menu when it's open */
+}
+
+/* Burger Icon */
+.menuToggle {
+  display: none; /* Hide the button by default for larger screens */
+  cursor: pointer;
+}
+.menuVisible {
+  display: block;
+}
+
+/* Open State for Burger Icon - Displayed for Smaller Screens */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex; /* Show the button for smaller screens */
+    flex-direction: column;
+    align-items: center;
+  }
+  .menuVisible {
+    display: none; /* Hide the menu for smaller screens by default */
+  }
+}
